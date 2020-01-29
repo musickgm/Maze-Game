@@ -387,20 +387,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity Projects\Maze-Game\Maze Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b22c0000
-    m_LastClickedID: 11442
-    m_ExpandedIDs: 00000000902c000000ca9a3b
+    m_SelectedIDs: 2e2f0000
+    m_LastClickedID: 12078
+    m_ExpandedIDs: 00000000962c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -428,7 +428,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000902c0000
+    m_ExpandedIDs: 00000000962c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000c8530000b0550000b2550000d6390000e6ae0000a2410000f01e010000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -549,23 +549,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 78fbffff
+      m_SelectedIDs: 7cc7ffff
+      m_LastClickedID: -14468
+      m_ExpandedIDs: 5cfaffff76fbffff74300000da300000f23000001e310000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: InnerWallSegmentSmall
+        m_OriginalName: InnerWallSegmentSmall
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -3328
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 6}
       m_SearchString: 
@@ -611,9 +611,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -14.892182, y: 1.568367, z: 6.055397}
+    m_Target: {x: -33.932686, y: -10.765625, z: 22.175781}
     speed: 2
-    m_Value: {x: -14.892182, y: 1.568367, z: 6.055397}
+    m_Value: {x: -33.932686, y: -10.765625, z: 22.175781}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -642,17 +642,17 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.60833263, y: 0.039242912, z: -0.030137079, w: 0.7921388}
+    m_Target: {x: 0.51091754, y: -0.01933881, z: 0.011497811, w: 0.8593434}
     speed: 2
-    m_Value: {x: 0.6085413, y: 0.033300813, z: -0.02557377, w: 0.79241055}
+    m_Value: {x: 0.51348966, y: -0.019304095, z: 0.011555697, w: 0.8578008}
   m_Size:
-    m_Target: 72.29037
+    m_Target: 109.249214
     speed: 2
-    m_Value: 72.29037
+    m_Value: 114.39708
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.4974874
