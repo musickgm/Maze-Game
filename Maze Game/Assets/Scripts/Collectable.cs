@@ -18,8 +18,8 @@ public class Collectable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Rotation in x axis (the coin is a rotated cylinder)
-        transform.Rotate(new Vector3(rotationValue, 0, 0) * Time.deltaTime);
+
+        transform.Rotate(new Vector3(0, rotationValue, 0) * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)

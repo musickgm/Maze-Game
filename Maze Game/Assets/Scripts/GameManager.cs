@@ -8,10 +8,14 @@ public class GameManager : Singleton<GameManager>
     public int coinValue = 10;
     public float secondsBetweenReduction;
     public int scoreReductionValue;
+    public Material material1;
+    public Material material2;
 
     private bool isGameOver = false;
     private int score;
     private IEnumerator scoreCoroutine;
+    private IEnumerator invisibleCoroutine;
+    private Color invisibleColor = Color.white;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +23,11 @@ public class GameManager : Singleton<GameManager>
         score = startingScore;
         scoreCoroutine = ScoreReducer();
         StartCoroutine(scoreCoroutine);
+
+
+        material1.SetColor("_Color", Color.white);
+        material2.SetColor("_Color", Color.white);
+        invisibleColor.a = 0;
     }
 
     // Update is called once per frame
@@ -39,6 +48,12 @@ public class GameManager : Singleton<GameManager>
                 print("Collected a camera bonus");
                 break;
             case Collectable.CollectableType.Invisible:
+                if(invisibleCoroutine != null)
+                {
+                    StopCoroutine(invisibleCoroutine);
+                }
+                invisibleCoroutine = InvisibleWalls();
+                StartCoroutine(invisibleCoroutine);
                 print("Collected an invisible bonus");
                 break;
             case Collectable.CollectableType.Objective:
@@ -69,5 +84,16 @@ public class GameManager : Singleton<GameManager>
             yield return new WaitForSeconds(secondsBetweenReduction);
             score -= scoreReductionValue;
         }
+    }
+
+
+    private IEnumerator InvisibleWalls()
+    {
+        material1.SetColor("_Color", invisibleColor);
+        material2.SetColor("Color", invisibleColor);
+        yield return new WaitForSeconds(5);
+        material1.SetColor("_Color", Color.white);
+        material2.SetColor("_Color", Color.white);
+        yield return null;
     }
 }
