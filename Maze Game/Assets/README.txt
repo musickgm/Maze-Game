@@ -35,5 +35,5 @@ at the start of each new level so that the ball did not continue moving. Additio
 
 
 SOURCES:
-Pebbles and stone wall .png file from https://www.wildtextures.com/category/options/seamless/
+Pebbles, granite, and stone wall .png file from https://www.wildtextures.com/category/options/seamless/
 Grass/Hedge .png file from https://www.tonytextures.com/tileable-hedge-textures-free-download-3d-rendering/
