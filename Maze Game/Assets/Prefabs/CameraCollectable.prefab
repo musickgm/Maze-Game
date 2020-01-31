@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4783705066228549840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0946524, y: -5.72, z: 2.59}
+  m_LocalPosition: {x: 2.0946524, y: 3, z: 2.59}
   m_LocalScale: {x: 1, y: 2, z: 2}
   m_Children:
   - {fileID: 4046441649493977545}
@@ -60,6 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableType: 1
   rotationValue: 90
+  _clip: {fileID: 8300000, guid: bd688bb83c56acd4aa9af0ae8324cba8, type: 3}
 --- !u!1 &5094832561894099330
 GameObject:
   m_ObjectHideFlags: 0

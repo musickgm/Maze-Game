@@ -1,64 +1,48 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
-/// Inherit from this base class to create a singleton.
-/// e.g. public class MyClassName : Singleton<MyClassName> {}
+/// Singleton pattern. Adapted from a previous project. 
 /// </summary>
-public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+public class Singleton<T> : MonoBehaviour where T : Component
 {
-    // Check to see if we're about to be destroyed.
-    private static bool m_ShuttingDown = false;
-    private static object m_Lock = new object();
-    private static T m_Instance;
+    protected static T _instance = null;
 
     /// <summary>
-    /// Access singleton instance through this propriety.
+    /// Singleton design pattern
     /// </summary>
+    /// <value>The instance.</value>
     public static T Instance
     {
         get
         {
-            if (m_ShuttingDown)
+            if (_instance == null)
             {
-                Debug.LogWarning("[Singleton] Instance '" + typeof(T) +
-                    "' already destroyed. Returning null.");
-                return null;
-            }
-
-            lock (m_Lock)
-            {
-                if (m_Instance == null)
+                _instance = FindObjectOfType<T>();
+                if (_instance == null)
                 {
-                    // Search for existing instance.
-                    m_Instance = (T)FindObjectOfType(typeof(T));
-
-                    // Create new instance if one doesn't already exist.
-                    if (m_Instance == null)
-                    {
-                        // Need to create a new GameObject to attach the singleton to.
-                        var singletonObject = new GameObject();
-                        m_Instance = singletonObject.AddComponent<T>();
-                        singletonObject.name = typeof(T).ToString() + " (Singleton)";
-
-                        // Make instance persistent.
-                        DontDestroyOnLoad(singletonObject);
-                    }
+                    GameObject obj = new GameObject();
+                    _instance = obj.AddComponent<T>();
                 }
-
-                return m_Instance;
             }
+            return _instance;
         }
     }
 
-
-    private void OnApplicationQuit()
+    /// <summary>
+    /// On awake, we initialize our instance. Make sure to call base.Awake() in override if you need awake.
+    /// </summary>
+    protected virtual void Awake()
     {
-        m_ShuttingDown = true;
-    }
-
-
-    private void OnDestroy()
-    {
-        m_ShuttingDown = true;
+        if (!Application.isPlaying)
+        {
+            return;
+        }
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject);
+        }
+        _instance = this as T;
     }
 }
