@@ -33,6 +33,9 @@ implmenting the clamp function for the PlayerController. Taking off colliders fo
 removed the rotation problem. See wall clipping solution below. 
 Another problem I ran into was jerky motion when a player ran into a wall. I fixed this by checking for a 
 raycast and removing the sprint if the player was right in front of a wall. 
+For the minimap, I implemented a second camera (orthographic). For better visualization, I parented spheres
+above each collectable that are on their own layer that is excluded from the main camera. A gian cube
+above the player represents the player on the minimap as well. 
 
 
 
